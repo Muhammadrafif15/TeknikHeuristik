@@ -1,0 +1,201 @@
+graduate_id,job_id,company_id,position_name,fitness_score
+G001,J022,C05,Graphic Designer,87.34
+G002,J002,C01,Data Analyst,65.14
+G003,J001,C01,Software Engineer,81.71
+G004,J025,C05,Brand Strategist,78.73
+G005,J005,C01,Business Analyst (Tech),88.66
+G006,J018,C04,Community Program Coordinator,76.68
+G007,J005,C01,Business Analyst (Tech),92.35
+G008,J005,C01,Business Analyst (Tech),89.57
+G009,J005,C01,Business Analyst (Tech),92.39
+G010,J022,C05,Graphic Designer,93.49
+G011,J005,C01,Business Analyst (Tech),82.75
+G012,J001,C01,Software Engineer,89.57
+G013,J013,C03,Accounting Staff,69.78
+G014,J025,C05,Brand Strategist,83.56
+G015,J005,C01,Business Analyst (Tech),83.19
+G016,J006,C02,Mechanical Engineer,79.2
+G017,J001,C01,Software Engineer,83.26
+G018,J006,C02,Mechanical Engineer,82.23
+G019,J022,C05,Graphic Designer,83.72
+G020,J022,C05,Graphic Designer,86.92
+G021,J007,C02,Process Engineer,88.08
+G022,J002,C01,Data Analyst,85.64
+G023,J007,C02,Process Engineer,83.68
+G024,J007,C02,Process Engineer,87.94
+G025,J004,C01,UI/UX Designer,69.11
+G026,J022,C05,Graphic Designer,87.4
+G027,J016,C04,Public Relations Officer,78.76
+G028,J008,C02,Quality Control Staff,74.14
+G029,J008,C02,Quality Control Staff,75.6
+G030,J012,C03,Marketing Executive,79.02
+G031,J005,C01,Business Analyst (Tech),90.09
+G032,J007,C02,Process Engineer,88.21
+G033,J007,C02,Process Engineer,84.93
+G034,J002,C01,Data Analyst,83.5
+G035,J001,C01,Software Engineer,85.22
+G036,J002,C01,Data Analyst,85.27
+G037,J001,C01,Software Engineer,84.89
+G038,J007,C02,Process Engineer,79.07
+G039,J001,C01,Software Engineer,86.28
+G040,J007,C02,Process Engineer,82.63
+G041,J007,C02,Process Engineer,75.71
+G042,J022,C05,Graphic Designer,86.62
+G043,J005,C01,Business Analyst (Tech),85.21
+G044,J007,C02,Process Engineer,77.65
+G045,J022,C05,Graphic Designer,87.63
+G046,J007,C02,Process Engineer,80.15
+G047,J007,C02,Process Engineer,82.21
+G048,J022,C05,Graphic Designer,84.12
+G049,J022,C05,Graphic Designer,92.92
+G050,J022,C05,Graphic Designer,89.36
+G051,J002,C01,Data Analyst,83.01
+G052,J002,C01,Data Analyst,76.83
+G053,J005,C01,Business Analyst (Tech),89.03
+G054,J009,C02,Production Supervisor,68.28
+G055,J005,C01,Business Analyst (Tech),83.59
+G056,J022,C05,Graphic Designer,90.12
+G057,J024,C05,Copywriter,64.49
+G058,J005,C01,Business Analyst (Tech),83.5
+G059,J005,C01,Business Analyst (Tech),84.78
+G060,J022,C05,Graphic Designer,90.19
+G061,J022,C05,Graphic Designer,88.66
+G062,J005,C01,Business Analyst (Tech),85.14
+G063,J005,C01,Business Analyst (Tech),85.58
+G064,J007,C02,Process Engineer,88.48
+G065,J023,C05,Social Media Specialist,68.89
+G066,J017,C04,Administrative Staff,82.61
+G067,J004,C01,UI/UX Designer,77.56
+G068,J011,C03,Financial Analyst,66.41
+G069,J014,C03,Business Development,66.35
+G070,J005,C01,Business Analyst (Tech),90.88
+G071,J002,C01,Data Analyst,83.51
+G072,J005,C01,Business Analyst (Tech),86.88
+G073,J001,C01,Software Engineer,83.83
+G074,J022,C05,Graphic Designer,80.03
+G075,J005,C01,Business Analyst (Tech),85.2
+G076,J002,C01,Data Analyst,83.55
+G077,J022,C05,Graphic Designer,84.81
+G078,J022,C05,Graphic Designer,88.59
+G079,J025,C05,Brand Strategist,78.82
+G080,J022,C05,Graphic Designer,85.86
+G081,J006,C02,Mechanical Engineer,75.01
+G082,J009,C02,Production Supervisor,66.23
+G083,J001,C01,Software Engineer,82.69
+G084,J016,C04,Public Relations Officer,73.61
+G085,J007,C02,Process Engineer,79.39
+G086,J007,C02,Process Engineer,85.14
+G087,J006,C02,Mechanical Engineer,77.13
+G088,J022,C05,Graphic Designer,85.13
+G089,J010,C02,Maintenance Engineer,80.05
+G090,J022,C05,Graphic Designer,86.25
+G091,J018,C04,Community Program Coordinator,77.68
+G092,J023,C05,Social Media Specialist,75.01
+G093,J025,C05,Brand Strategist,76.16
+G094,J001,C01,Software Engineer,83.17
+G095,J025,C05,Brand Strategist,80.23
+G096,J003,C01,IT Support Specialist,71.56
+G097,J005,C01,Business Analyst (Tech),82.75
+G098,J022,C05,Graphic Designer,88.87
+G099,J006,C02,Mechanical Engineer,79.96
+G100,J019,C04,Policy Analyst,65.92
+G101,J007,C02,Process Engineer,82.33
+G102,J006,C02,Mechanical Engineer,82.24
+G103,J007,C02,Process Engineer,87.23
+G104,J005,C01,Business Analyst (Tech),92.28
+G105,J007,C02,Process Engineer,81.26
+G106,J012,C03,Marketing Executive,62.11
+G107,J005,C01,Business Analyst (Tech),78.25
+G108,J023,C05,Social Media Specialist,72.78
+G109,J021,C05,Content Creator,76.47
+G110,J005,C01,Business Analyst (Tech),88.17
+G111,J002,C01,Data Analyst,83.73
+G112,J005,C01,Business Analyst (Tech),85.79
+G113,J022,C05,Graphic Designer,84.99
+G114,J022,C05,Graphic Designer,88.67
+G115,J022,C05,Graphic Designer,85.19
+G116,J019,C04,Policy Analyst,74.34
+G117,J022,C05,Graphic Designer,89.24
+G118,J025,C05,Brand Strategist,85.62
+G119,J022,C05,Graphic Designer,76.06
+G120,J003,C01,IT Support Specialist,69.24
+G121,J022,C05,Graphic Designer,86.54
+G122,J001,C01,Software Engineer,81.17
+G123,J023,C05,Social Media Specialist,76.7
+G124,J022,C05,Graphic Designer,93.88
+G125,J022,C05,Graphic Designer,83.72
+G126,J007,C02,Process Engineer,87.3
+G127,J023,C05,Social Media Specialist,71.72
+G128,J006,C02,Mechanical Engineer,76.35
+G129,J006,C02,Mechanical Engineer,85.77
+G130,J001,C01,Software Engineer,81.52
+G131,J022,C05,Graphic Designer,87.44
+G132,J015,C03,HR Generalist,77.34
+G133,J014,C03,Business Development,73.59
+G134,J025,C05,Brand Strategist,75.39
+G135,J007,C02,Process Engineer,85.9
+G136,J014,C03,Business Development,73.76
+G137,J023,C05,Social Media Specialist,77.1
+G138,J007,C02,Process Engineer,87.75
+G139,J015,C03,HR Generalist,72.49
+G140,J019,C04,Policy Analyst,70.76
+G141,J005,C01,Business Analyst (Tech),89.55
+G142,J022,C05,Graphic Designer,87.92
+G143,J007,C02,Process Engineer,82.0
+G144,J005,C01,Business Analyst (Tech),73.5
+G145,J012,C03,Marketing Executive,72.99
+G146,J005,C01,Business Analyst (Tech),85.48
+G147,J007,C02,Process Engineer,83.98
+G148,J005,C01,Business Analyst (Tech),84.36
+G149,J022,C05,Graphic Designer,96.6
+G150,J015,C03,HR Generalist,74.55
+G151,J001,C01,Software Engineer,82.26
+G152,J017,C04,Administrative Staff,72.15
+G153,J017,C04,Administrative Staff,67.72
+G154,J007,C02,Process Engineer,83.47
+G155,J010,C02,Maintenance Engineer,85.21
+G156,J002,C01,Data Analyst,82.74
+G157,J005,C01,Business Analyst (Tech),87.84
+G158,J002,C01,Data Analyst,86.21
+G159,J022,C05,Graphic Designer,94.99
+G160,J003,C01,IT Support Specialist,58.3
+G161,J005,C01,Business Analyst (Tech),89.6
+G162,J007,C02,Process Engineer,86.33
+G163,J005,C01,Business Analyst (Tech),84.61
+G164,J013,C03,Accounting Staff,63.91
+G165,J005,C01,Business Analyst (Tech),81.82
+G166,J022,C05,Graphic Designer,86.48
+G167,J001,C01,Software Engineer,74.44
+G168,J022,C05,Graphic Designer,88.29
+G169,J022,C05,Graphic Designer,84.75
+G170,J005,C01,Business Analyst (Tech),88.77
+G171,J023,C05,Social Media Specialist,75.11
+G172,J022,C05,Graphic Designer,90.53
+G173,J017,C04,Administrative Staff,81.74
+G174,J009,C02,Production Supervisor,74.93
+G175,J005,C01,Business Analyst (Tech),82.75
+G176,J014,C03,Business Development,82.82
+G177,J022,C05,Graphic Designer,88.15
+G178,J023,C05,Social Media Specialist,74.02
+G179,J022,C05,Graphic Designer,84.49
+G180,J012,C03,Marketing Executive,62.18
+G181,J009,C02,Production Supervisor,72.6
+G182,J005,C01,Business Analyst (Tech),87.48
+G183,J017,C04,Administrative Staff,87.45
+G184,J002,C01,Data Analyst,79.83
+G185,J006,C02,Mechanical Engineer,78.12
+G186,J005,C01,Business Analyst (Tech),87.48
+G187,J005,C01,Business Analyst (Tech),87.7
+G188,J009,C02,Production Supervisor,67.19
+G189,J022,C05,Graphic Designer,85.67
+G190,J005,C01,Business Analyst (Tech),89.02
+G191,J022,C05,Graphic Designer,95.08
+G192,J005,C01,Business Analyst (Tech),90.22
+G193,J023,C05,Social Media Specialist,70.43
+G194,J002,C01,Data Analyst,80.65
+G195,J022,C05,Graphic Designer,75.25
+G196,J020,C04,Customer Service Lead,72.8
+G197,J022,C05,Graphic Designer,92.71
+G198,J005,C01,Business Analyst (Tech),85.12
+G199,J006,C02,Mechanical Engineer,65.95
+G200,J005,C01,Business Analyst (Tech),90.22

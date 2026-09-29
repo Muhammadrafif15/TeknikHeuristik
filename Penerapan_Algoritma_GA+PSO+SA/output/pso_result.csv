@@ -1,0 +1,201 @@
+graduate_id,job_id,company_id,position_name,fitness_score
+G001,J001,C01,Software Engineer,83.9
+G002,J025,C05,Brand Strategist,80.85
+G003,J001,C01,Software Engineer,81.71
+G004,J025,C05,Brand Strategist,78.73
+G005,J001,C01,Software Engineer,78.0
+G006,J022,C05,Graphic Designer,88.29
+G007,J025,C05,Brand Strategist,70.0
+G008,J025,C05,Brand Strategist,72.4
+G009,J025,C05,Brand Strategist,73.67
+G010,J025,C05,Brand Strategist,69.49
+G011,J001,C01,Software Engineer,84.63
+G012,J025,C05,Brand Strategist,75.19
+G013,J001,C01,Software Engineer,79.48
+G014,J005,C01,Business Analyst (Tech),88.45
+G015,J001,C01,Software Engineer,83.55
+G016,J025,C05,Brand Strategist,65.87
+G017,J025,C05,Brand Strategist,78.04
+G018,J001,C01,Software Engineer,78.85
+G019,J005,C01,Business Analyst (Tech),87.08
+G020,J001,C01,Software Engineer,80.93
+G021,J001,C01,Software Engineer,83.93
+G022,J025,C05,Brand Strategist,73.97
+G023,J005,C01,Business Analyst (Tech),84.7
+G024,J022,C05,Graphic Designer,85.0
+G025,J001,C01,Software Engineer,79.54
+G026,J025,C05,Brand Strategist,62.65
+G027,J005,C01,Business Analyst (Tech),83.25
+G028,J001,C01,Software Engineer,78.29
+G029,J025,C05,Brand Strategist,87.52
+G030,J001,C01,Software Engineer,77.04
+G031,J010,C02,Maintenance Engineer,71.17
+G032,J015,C03,HR Generalist,76.85
+G033,J001,C01,Software Engineer,87.89
+G034,J001,C01,Software Engineer,79.21
+G035,J001,C01,Software Engineer,85.22
+G036,J001,C01,Software Engineer,80.62
+G037,J025,C05,Brand Strategist,65.08
+G038,J025,C05,Brand Strategist,82.48
+G039,J001,C01,Software Engineer,86.28
+G040,J001,C01,Software Engineer,83.08
+G041,J025,C05,Brand Strategist,66.42
+G042,J022,C05,Graphic Designer,86.62
+G043,J001,C01,Software Engineer,83.68
+G044,J001,C01,Software Engineer,78.07
+G045,J022,C05,Graphic Designer,87.63
+G046,J001,C01,Software Engineer,80.7
+G047,J005,C01,Business Analyst (Tech),82.23
+G048,J025,C05,Brand Strategist,81.25
+G049,J025,C05,Brand Strategist,69.05
+G050,J001,C01,Software Engineer,86.1
+G051,J025,C05,Brand Strategist,78.08
+G052,J005,C01,Business Analyst (Tech),87.05
+G053,J005,C01,Business Analyst (Tech),89.03
+G054,J005,C01,Business Analyst (Tech),78.62
+G055,J001,C01,Software Engineer,80.28
+G056,J001,C01,Software Engineer,82.41
+G057,J007,C02,Process Engineer,88.46
+G058,J025,C05,Brand Strategist,64.03
+G059,J025,C05,Brand Strategist,67.28
+G060,J025,C05,Brand Strategist,72.6
+G061,J001,C01,Software Engineer,83.75
+G062,J001,C01,Software Engineer,83.02
+G063,J022,C05,Graphic Designer,88.32
+G064,J001,C01,Software Engineer,84.37
+G065,J018,C04,Community Program Coordinator,74.96
+G066,J022,C05,Graphic Designer,85.41
+G067,J022,C05,Graphic Designer,83.19
+G068,J025,C05,Brand Strategist,82.69
+G069,J001,C01,Software Engineer,79.84
+G070,J025,C05,Brand Strategist,80.49
+G071,J025,C05,Brand Strategist,66.23
+G072,J011,C03,Financial Analyst,69.73
+G073,J005,C01,Business Analyst (Tech),83.96
+G074,J005,C01,Business Analyst (Tech),86.12
+G075,J025,C05,Brand Strategist,69.5
+G076,J001,C01,Software Engineer,79.16
+G077,J022,C05,Graphic Designer,84.81
+G078,J001,C01,Software Engineer,81.14
+G079,J025,C05,Brand Strategist,78.82
+G080,J001,C01,Software Engineer,78.3
+G081,J001,C01,Software Engineer,80.48
+G082,J025,C05,Brand Strategist,75.22
+G083,J025,C05,Brand Strategist,75.85
+G084,J001,C01,Software Engineer,79.49
+G085,J001,C01,Software Engineer,74.88
+G086,J001,C01,Software Engineer,84.42
+G087,J025,C05,Brand Strategist,64.49
+G088,J025,C05,Brand Strategist,76.24
+G089,J001,C01,Software Engineer,81.71
+G090,J018,C04,Community Program Coordinator,80.94
+G091,J001,C01,Software Engineer,78.87
+G092,J001,C01,Software Engineer,79.99
+G093,J025,C05,Brand Strategist,76.16
+G094,J022,C05,Graphic Designer,82.49
+G095,J025,C05,Brand Strategist,80.23
+G096,J001,C01,Software Engineer,84.65
+G097,J025,C05,Brand Strategist,77.14
+G098,J001,C01,Software Engineer,83.74
+G099,J025,C05,Brand Strategist,74.34
+G100,J001,C01,Software Engineer,83.47
+G101,J001,C01,Software Engineer,83.12
+G102,J001,C01,Software Engineer,80.82
+G103,J011,C03,Financial Analyst,77.09
+G104,J001,C01,Software Engineer,85.17
+G105,J025,C05,Brand Strategist,73.66
+G106,J002,C01,Data Analyst,84.03
+G107,J025,C05,Brand Strategist,77.55
+G108,J001,C01,Software Engineer,77.11
+G109,J013,C03,Accounting Staff,76.14
+G110,J025,C05,Brand Strategist,76.25
+G111,J001,C01,Software Engineer,83.06
+G112,J025,C05,Brand Strategist,76.22
+G113,J005,C01,Business Analyst (Tech),87.25
+G114,J025,C05,Brand Strategist,71.36
+G115,J005,C01,Business Analyst (Tech),87.67
+G116,J001,C01,Software Engineer,78.39
+G117,J001,C01,Software Engineer,75.62
+G118,J001,C01,Software Engineer,78.06
+G119,J001,C01,Software Engineer,82.31
+G120,J001,C01,Software Engineer,82.0
+G121,J001,C01,Software Engineer,78.63
+G122,J007,C02,Process Engineer,85.9
+G123,J025,C05,Brand Strategist,75.8
+G124,J014,C03,Business Development,66.09
+G125,J001,C01,Software Engineer,81.38
+G126,J025,C05,Brand Strategist,70.46
+G127,J001,C01,Software Engineer,84.27
+G128,J001,C01,Software Engineer,80.92
+G129,J001,C01,Software Engineer,81.18
+G130,J025,C05,Brand Strategist,81.35
+G131,J025,C05,Brand Strategist,67.05
+G132,J001,C01,Software Engineer,84.5
+G133,J025,C05,Brand Strategist,85.75
+G134,J001,C01,Software Engineer,75.82
+G135,J025,C05,Brand Strategist,74.67
+G136,J025,C05,Brand Strategist,81.07
+G137,J022,C05,Graphic Designer,86.18
+G138,J001,C01,Software Engineer,85.98
+G139,J001,C01,Software Engineer,84.87
+G140,J011,C03,Financial Analyst,82.41
+G141,J025,C05,Brand Strategist,71.56
+G142,J025,C05,Brand Strategist,74.98
+G143,J025,C05,Brand Strategist,75.13
+G144,J025,C05,Brand Strategist,84.28
+G145,J001,C01,Software Engineer,88.98
+G146,J025,C05,Brand Strategist,66.37
+G147,J025,C05,Brand Strategist,67.16
+G148,J025,C05,Brand Strategist,78.27
+G149,J025,C05,Brand Strategist,71.08
+G150,J025,C05,Brand Strategist,68.76
+G151,J001,C01,Software Engineer,82.26
+G152,J022,C05,Graphic Designer,80.97
+G153,J001,C01,Software Engineer,81.47
+G154,J022,C05,Graphic Designer,86.81
+G155,J025,C05,Brand Strategist,53.88
+G156,J001,C01,Software Engineer,83.28
+G157,J025,C05,Brand Strategist,69.36
+G158,J002,C01,Data Analyst,86.21
+G159,J001,C01,Software Engineer,79.37
+G160,J016,C04,Public Relations Officer,69.51
+G161,J025,C05,Brand Strategist,72.84
+G162,J007,C02,Process Engineer,86.33
+G163,J025,C05,Brand Strategist,70.08
+G164,J001,C01,Software Engineer,80.4
+G165,J025,C05,Brand Strategist,75.11
+G166,J005,C01,Business Analyst (Tech),88.57
+G167,J001,C01,Software Engineer,74.44
+G168,J001,C01,Software Engineer,81.19
+G169,J001,C01,Software Engineer,88.05
+G170,J025,C05,Brand Strategist,71.0
+G171,J018,C04,Community Program Coordinator,75.37
+G172,J025,C05,Brand Strategist,68.8
+G173,J014,C03,Business Development,79.28
+G174,J025,C05,Brand Strategist,80.0
+G175,J001,C01,Software Engineer,78.69
+G176,J001,C01,Software Engineer,69.1
+G177,J025,C05,Brand Strategist,64.11
+G178,J001,C01,Software Engineer,77.78
+G179,J001,C01,Software Engineer,77.03
+G180,J001,C01,Software Engineer,75.21
+G181,J025,C05,Brand Strategist,76.45
+G182,J001,C01,Software Engineer,87.82
+G183,J005,C01,Business Analyst (Tech),90.55
+G184,J001,C01,Software Engineer,83.06
+G185,J001,C01,Software Engineer,73.84
+G186,J025,C05,Brand Strategist,70.04
+G187,J001,C01,Software Engineer,76.39
+G188,J025,C05,Brand Strategist,75.72
+G189,J025,C05,Brand Strategist,69.03
+G190,J001,C01,Software Engineer,82.19
+G191,J001,C01,Software Engineer,76.91
+G192,J025,C05,Brand Strategist,71.19
+G193,J025,C05,Brand Strategist,71.68
+G194,J025,C05,Brand Strategist,78.73
+G195,J014,C03,Business Development,84.06
+G196,J025,C05,Brand Strategist,84.07
+G197,J001,C01,Software Engineer,79.05
+G198,J025,C05,Brand Strategist,69.41
+G199,J016,C04,Public Relations Officer,70.66
+G200,J001,C01,Software Engineer,84.91

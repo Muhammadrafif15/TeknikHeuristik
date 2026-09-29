@@ -1,0 +1,201 @@
+graduate_id,job_id,company_id,position_name,fitness_score
+G001,J008,C02,Quality Control Staff,64.13
+G002,J020,C04,Customer Service Lead,74.35
+G003,J005,C01,Business Analyst (Tech),87.82
+G004,J010,C02,Maintenance Engineer,56.91
+G005,J010,C02,Maintenance Engineer,67.1
+G006,J012,C03,Marketing Executive,63.58
+G007,J023,C05,Social Media Specialist,65.4
+G008,J003,C01,IT Support Specialist,69.87
+G009,J024,C05,Copywriter,59.74
+G010,J002,C01,Data Analyst,82.84
+G011,J011,C03,Financial Analyst,72.11
+G012,J008,C02,Quality Control Staff,61.92
+G013,J009,C02,Production Supervisor,71.63
+G014,J025,C05,Brand Strategist,83.56
+G015,J012,C03,Marketing Executive,54.57
+G016,J023,C05,Social Media Specialist,64.13
+G017,J001,C01,Software Engineer,83.26
+G018,J025,C05,Brand Strategist,69.5
+G019,J023,C05,Social Media Specialist,66.4
+G020,J019,C04,Policy Analyst,73.16
+G021,J025,C05,Brand Strategist,73.2
+G022,J001,C01,Software Engineer,82.51
+G023,J018,C04,Community Program Coordinator,59.24
+G024,J002,C01,Data Analyst,83.37
+G025,J021,C05,Content Creator,58.85
+G026,J022,C05,Graphic Designer,87.4
+G027,J005,C01,Business Analyst (Tech),83.25
+G028,J022,C05,Graphic Designer,89.31
+G029,J002,C01,Data Analyst,73.46
+G030,J025,C05,Brand Strategist,78.33
+G031,J015,C03,HR Generalist,61.54
+G032,J020,C04,Customer Service Lead,75.44
+G033,J017,C04,Administrative Staff,72.58
+G034,J002,C01,Data Analyst,83.5
+G035,J015,C03,HR Generalist,73.76
+G036,J015,C03,HR Generalist,65.74
+G037,J018,C04,Community Program Coordinator,58.99
+G038,J023,C05,Social Media Specialist,76.68
+G039,J020,C04,Customer Service Lead,70.64
+G040,J016,C04,Public Relations Officer,63.05
+G041,J022,C05,Graphic Designer,83.84
+G042,J015,C03,HR Generalist,71.79
+G043,J010,C02,Maintenance Engineer,61.21
+G044,J019,C04,Policy Analyst,70.29
+G045,J014,C03,Business Development,59.03
+G046,J015,C03,HR Generalist,69.66
+G047,J018,C04,Community Program Coordinator,68.78
+G048,J020,C04,Customer Service Lead,67.6
+G049,J006,C02,Mechanical Engineer,74.93
+G050,J022,C05,Graphic Designer,89.36
+G051,J023,C05,Social Media Specialist,73.79
+G052,J008,C02,Quality Control Staff,62.8
+G053,J022,C05,Graphic Designer,83.54
+G054,J009,C02,Production Supervisor,68.28
+G055,J018,C04,Community Program Coordinator,67.64
+G056,J023,C05,Social Media Specialist,67.56
+G057,J012,C03,Marketing Executive,60.9
+G058,J012,C03,Marketing Executive,60.58
+G059,J010,C02,Maintenance Engineer,76.19
+G060,J017,C04,Administrative Staff,71.23
+G061,J025,C05,Brand Strategist,75.27
+G062,J003,C01,IT Support Specialist,68.3
+G063,J014,C03,Business Development,52.26
+G064,J024,C05,Copywriter,66.16
+G065,J004,C01,UI/UX Designer,63.22
+G066,J018,C04,Community Program Coordinator,75.56
+G067,J003,C01,IT Support Specialist,67.39
+G068,J012,C03,Marketing Executive,66.62
+G069,J017,C04,Administrative Staff,74.6
+G070,J006,C02,Mechanical Engineer,66.43
+G071,J021,C05,Content Creator,60.66
+G072,J022,C05,Graphic Designer,88.18
+G073,J004,C01,UI/UX Designer,74.61
+G074,J022,C05,Graphic Designer,80.03
+G075,J018,C04,Community Program Coordinator,60.0
+G076,J017,C04,Administrative Staff,73.13
+G077,J012,C03,Marketing Executive,66.23
+G078,J010,C02,Maintenance Engineer,74.0
+G079,J004,C01,UI/UX Designer,59.45
+G080,J019,C04,Policy Analyst,70.03
+G081,J016,C04,Public Relations Officer,67.2
+G082,J024,C05,Copywriter,66.43
+G083,J004,C01,UI/UX Designer,63.16
+G084,J022,C05,Graphic Designer,92.59
+G085,J001,C01,Software Engineer,74.88
+G086,J004,C01,UI/UX Designer,70.92
+G087,J011,C03,Financial Analyst,73.31
+G088,J004,C01,UI/UX Designer,69.67
+G089,J016,C04,Public Relations Officer,65.08
+G090,J011,C03,Financial Analyst,63.2
+G091,J023,C05,Social Media Specialist,73.76
+G092,J015,C03,HR Generalist,77.3
+G093,J021,C05,Content Creator,75.69
+G094,J014,C03,Business Development,51.39
+G095,J015,C03,HR Generalist,81.45
+G096,J013,C03,Accounting Staff,49.74
+G097,J012,C03,Marketing Executive,75.77
+G098,J025,C05,Brand Strategist,61.55
+G099,J021,C05,Content Creator,74.84
+G100,J012,C03,Marketing Executive,69.31
+G101,J013,C03,Accounting Staff,49.9
+G102,J010,C02,Maintenance Engineer,76.46
+G103,J015,C03,HR Generalist,72.59
+G104,J019,C04,Policy Analyst,73.84
+G105,J003,C01,IT Support Specialist,61.93
+G106,J005,C01,Business Analyst (Tech),87.47
+G107,J018,C04,Community Program Coordinator,81.67
+G108,J010,C02,Maintenance Engineer,65.95
+G109,J021,C05,Content Creator,76.47
+G110,J025,C05,Brand Strategist,76.25
+G111,J005,C01,Business Analyst (Tech),83.85
+G112,J015,C03,HR Generalist,69.06
+G113,J007,C02,Process Engineer,83.26
+G114,J017,C04,Administrative Staff,70.64
+G115,J001,C01,Software Engineer,83.36
+G116,J019,C04,Policy Analyst,74.34
+G117,J010,C02,Maintenance Engineer,79.54
+G118,J024,C05,Copywriter,72.29
+G119,J024,C05,Copywriter,65.15
+G120,J018,C04,Community Program Coordinator,63.34
+G121,J009,C02,Production Supervisor,60.36
+G122,J008,C02,Quality Control Staff,64.24
+G123,J012,C03,Marketing Executive,67.59
+G124,J002,C01,Data Analyst,87.86
+G125,J024,C05,Copywriter,64.27
+G126,J016,C04,Public Relations Officer,65.08
+G127,J006,C02,Mechanical Engineer,73.4
+G128,J012,C03,Marketing Executive,68.2
+G129,J017,C04,Administrative Staff,60.3
+G130,J005,C01,Business Analyst (Tech),88.73
+G131,J013,C03,Accounting Staff,53.11
+G132,J012,C03,Marketing Executive,72.14
+G133,J011,C03,Financial Analyst,73.5
+G134,J002,C01,Data Analyst,72.66
+G135,J019,C04,Policy Analyst,70.1
+G136,J011,C03,Financial Analyst,56.75
+G137,J022,C05,Graphic Designer,86.18
+G138,J006,C02,Mechanical Engineer,85.65
+G139,J017,C04,Administrative Staff,66.82
+G140,J002,C01,Data Analyst,84.02
+G141,J017,C04,Administrative Staff,64.97
+G142,J001,C01,Software Engineer,82.02
+G143,J006,C02,Mechanical Engineer,72.88
+G144,J025,C05,Brand Strategist,84.28
+G145,J014,C03,Business Development,68.98
+G146,J017,C04,Administrative Staff,68.06
+G147,J004,C01,UI/UX Designer,70.63
+G148,J025,C05,Brand Strategist,78.27
+G149,J011,C03,Financial Analyst,72.56
+G150,J006,C02,Mechanical Engineer,71.13
+G151,J013,C03,Accounting Staff,72.61
+G152,J019,C04,Policy Analyst,63.73
+G153,J007,C02,Process Engineer,83.56
+G154,J011,C03,Financial Analyst,67.04
+G155,J011,C03,Financial Analyst,81.85
+G156,J017,C04,Administrative Staff,77.09
+G157,J005,C01,Business Analyst (Tech),87.84
+G158,J019,C04,Policy Analyst,71.52
+G159,J007,C02,Process Engineer,84.07
+G160,J014,C03,Business Development,57.46
+G161,J015,C03,HR Generalist,65.25
+G162,J019,C04,Policy Analyst,65.64
+G163,J006,C02,Mechanical Engineer,79.16
+G164,J002,C01,Data Analyst,79.28
+G165,J013,C03,Accounting Staff,65.23
+G166,J013,C03,Accounting Staff,65.22
+G167,J016,C04,Public Relations Officer,75.29
+G168,J023,C05,Social Media Specialist,57.24
+G169,J010,C02,Maintenance Engineer,66.5
+G170,J021,C05,Content Creator,68.32
+G171,J025,C05,Brand Strategist,75.42
+G172,J016,C04,Public Relations Officer,67.52
+G173,J017,C04,Administrative Staff,81.74
+G174,J017,C04,Administrative Staff,73.87
+G175,J021,C05,Content Creator,67.15
+G176,J014,C03,Business Development,82.82
+G177,J002,C01,Data Analyst,84.22
+G178,J012,C03,Marketing Executive,71.0
+G179,J004,C01,UI/UX Designer,74.78
+G180,J019,C04,Policy Analyst,66.11
+G181,J003,C01,IT Support Specialist,61.86
+G182,J001,C01,Software Engineer,87.82
+G183,J021,C05,Content Creator,77.88
+G184,J013,C03,Accounting Staff,54.33
+G185,J021,C05,Content Creator,60.22
+G186,J018,C04,Community Program Coordinator,64.04
+G187,J024,C05,Copywriter,53.82
+G188,J013,C03,Accounting Staff,60.29
+G189,J016,C04,Public Relations Officer,61.54
+G190,J013,C03,Accounting Staff,48.56
+G191,J003,C01,IT Support Specialist,62.37
+G192,J011,C03,Financial Analyst,67.98
+G193,J014,C03,Business Development,65.37
+G194,J006,C02,Mechanical Engineer,75.9
+G195,J014,C03,Business Development,84.06
+G196,J024,C05,Copywriter,70.2
+G197,J012,C03,Marketing Executive,60.91
+G198,J007,C02,Process Engineer,84.37
+G199,J015,C03,HR Generalist,69.46
+G200,J022,C05,Graphic Designer,85.87
