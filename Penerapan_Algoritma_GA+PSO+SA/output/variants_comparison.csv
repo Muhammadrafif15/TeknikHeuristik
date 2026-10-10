@@ -1,0 +1,4 @@
+variant,fitness,iterations_run
+1. Pure diversity,78.43,500
+2. Fixed schedule,79.13,500
+3. Threshold-or-cap,73.44,500

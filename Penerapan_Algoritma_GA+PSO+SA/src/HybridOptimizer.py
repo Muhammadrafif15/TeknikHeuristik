@@ -1,5 +1,5 @@
 """
-src/hybrid_optimizer.py
+src/HybridOptimizer.py
 
 Modul HYBRID OPTIMIZATION CORE
 Menggabungkan GA (global exploration), PSO (local exploitation), dan SA
@@ -35,7 +35,7 @@ paper tidak merinci mekanisme penyatuan representasi ini secara eksplisit.
 =====================================================================
 
 Cara pakai singkat:
-    from src.hybrid_optimizer import run_hybrid_optimization
+    from src.HybridOptimizer import run_hybrid_optimization
 
     best_solution, best_fitness, conv_log, switch_log = run_hybrid_optimization(
         df_grad, df_job, max_iterations=500
@@ -66,11 +66,27 @@ from src.AdaptiveSwitching import select_algorithm, classify_diversity
 # ============================================================
 HYBRID_PARAMS = {
     "max_iterations": 500,
+    "initial_ga_iterations": 100,  # OPSI B: fase awal wajib GA (paper: iterasi 0-100 = eksplorasi global)
+    "sa_reheat_threshold": 50,     # sesuai Tabel 3 paper (50 iterasi stagnan)
+    "sa_refresh_fraction": 0.4,    # OPSI B: porsi populasi terlemah yg disegarkan saat reheating (sebelumnya 0.2)
     "convergence_threshold": 1e-6,
-    "convergence_patience": 30,   # jumlah iterasi berturut2 tanpa perbaikan
-                                   # signifikan sebelum dianggap konvergen
-                                   # (tidak dirinci eksplisit di paper --
-                                   # ditambahkan agar proses bisa berhenti lebih awal)
+    "convergence_patience": 300,  # jumlah iterasi berturut2 tanpa perbaikan
+                                   # signifikan sebelum dianggap konvergen.
+                                   # PERBAIKAN: dinaikkan dari 30 -> 150 agar
+                                   # hybrid tidak berhenti jauh lebih dini
+                                   # dibanding Pure GA/PSO/SA yg dijalankan
+                                   # penuh 500 iterasi (perbandingan tidak adil
+                                   # jika hybrid berhenti di iterasi ~40-60).
+    "block_size": 10,              # PERBAIKAN: sekali satu algoritma terpilih
+                                   # (mis. GA), ia dijalankan `block_size`
+                                   # langkah BERTURUT-TURUT dulu sebelum sistem
+                                   # mengevaluasi ulang diversity & keputusan
+                                   # switching. Sebelumnya switching dievaluasi
+                                   # SETIAP iterasi, membuat GA hampir tidak
+                                   # pernah sempat "bekerja" (cuma 1 langkah lalu
+                                   # langsung dialihkan). Ini juga lebih sesuai
+                                   # Gambar 4 paper yg menunjukkan fase2 GA/PSO/SA
+                                   # berlangsung PULUHAN-RATUSAN iterasi, bukan 1.
 }
 
 
@@ -164,7 +180,8 @@ def _pso_step(positions: np.ndarray, velocities: np.ndarray,
 # TAHAP SA: SATU LANGKAH SA, hasilnya disisipkan ke populasi
 # ============================================================
 def _sa_step(positions: np.ndarray, fitness_values: np.ndarray,
-              sa_state: dict, fitness_matrix: np.ndarray, n_jobs: int) -> tuple:
+              sa_state: dict, fitness_matrix: np.ndarray, n_jobs: int,
+              reheat_threshold: int = None) -> tuple:
     """
     Menjalankan satu langkah SA berbasis solusi terbaik saat ini (gbest),
     lalu menyisipkan hasilnya ke individu terlemah dalam populasi (agar
@@ -196,7 +213,7 @@ def _sa_step(positions: np.ndarray, fitness_values: np.ndarray,
         stagnation_counter += 1
 
     reheated = False
-    if stagnation_counter >= SA_PARAMS["reheat_threshold"]:
+    if stagnation_counter >= (reheat_threshold or SA_PARAMS["reheat_threshold"]):
         temperature = SA_PARAMS["reheat_temperature"]
         stagnation_counter = 0
         reheated = True
@@ -256,7 +273,7 @@ def run_hybrid_optimization(
     fitness_matrix = precompute_fitness_matrix(df_grad, df_job)
 
     # --- Inisialisasi populasi/swarm bersama (representasi kontinu, ala PSO)
-    pop_size = PSO_PARAMS["swarm_size"]
+    pop_size = GA_PARAMS["population_size"]  # 100, sesuai Tabel 3 paper (GA)
     positions, velocities = initialize_swarm(pop_size, n_graduates, n_jobs)
 
     fitness_values = evaluate_swarm(positions, fitness_matrix, n_jobs)
@@ -282,73 +299,108 @@ def run_hybrid_optimization(
     prev_best = gbest_fitness
 
     start_time = time.perf_counter()
+    it = 0
+    converged = False
 
-    for it in range(p["max_iterations"]):
+    # --- Loop BERBASIS BLOK: satu algoritma terpilih dijalankan `block_size`
+    # langkah berturut-turut sebelum sistem mengevaluasi ulang diversity.
+    while it < p["max_iterations"] and not converged:
         diversity = _decoded_population_diversity(positions, n_jobs)
         algo = select_algorithm(diversity)
+        if it < p["initial_ga_iterations"]:
+            algo = "GA"  # fase eksplorasi awal, lalu diversity-based switching berjalan normal
 
-        if algo == "GA":
-            positions = _ga_step(positions, fitness_values, n_jobs)
-        elif algo == "PSO":
-            positions, velocities, _ = _pso_step(
-                positions, velocities, pbest_positions, gbest_position,
-                it, p["max_iterations"], n_jobs
-            )
-        else:  # "SA"
-            positions, sa_state, _ = _sa_step(
-                positions, fitness_values, sa_state, fitness_matrix, n_jobs
-            )
+        steps_this_block = min(p["block_size"], p["max_iterations"] - it)
 
-        # --- Evaluasi ulang & update pbest/gbest (berlaku utk semua kasus)
-        fitness_values = evaluate_swarm(positions, fitness_matrix, n_jobs)
-        improved_mask = fitness_values > pbest_fitness
-        pbest_positions[improved_mask] = positions[improved_mask]
-        pbest_fitness[improved_mask] = fitness_values[improved_mask]
+        for _ in range(steps_this_block):
+            if algo == "GA":
+                positions = _ga_step(positions, fitness_values, n_jobs)
+            elif algo == "PSO":
+                # Sesuai paper: swarm PSO = 50 partikel, sedangkan populasi
+                # bersama = 100. PSO menggerakkan 50 individu terbaik saat ini;
+                # sisanya tidak bergerak pada langkah PSO.
+                swarm_idx = np.argsort(fitness_values)[-PSO_PARAMS["swarm_size"]:]
+                sw_pos, sw_vel, _ = _pso_step(
+                    positions[swarm_idx], velocities[swarm_idx],
+                    pbest_positions[swarm_idx], gbest_position,
+                    it, p["max_iterations"], n_jobs
+                )
+                positions[swarm_idx] = sw_pos
+                velocities[swarm_idx] = sw_vel
+            else:  # "SA"
+                positions, sa_state, reheated = _sa_step(
+                    positions, fitness_values, sa_state, fitness_matrix, n_jobs,
+                    reheat_threshold=p["sa_reheat_threshold"],
+                )
+                # --- PERBAIKAN: SA hanya mengganti 1 individu/langkah, tidak
+                # cukup mengguncang diversity POPULASI secara keseluruhan,
+                # sehingga sistem bisa terjebak selamanya di kondisi LOW
+                # diversity (SA terus dipilih, PSO/GA tak pernah kebagian
+                # giliran lagi). Saat SA melakukan "reheating" (stagnan),
+                # sekalian segarkan ~20% individu terlemah dgn individu acak
+                # baru -- meniru mekanisme reheating pada level populasi,
+                # bukan cuma pada satu solusi SA saja.
+                if reheated:
+                    n_refresh = max(1, int(p["sa_refresh_fraction"] * positions.shape[0]))
+                    worst_indices = np.argsort(fitness_values)[:n_refresh]
+                    fresh_individuals = np.random.uniform(
+                        0, n_jobs, size=(n_refresh, n_graduates)
+                    )
+                    positions[worst_indices] = fresh_individuals
 
-        current_best_idx = np.argmax(pbest_fitness)
-        if pbest_fitness[current_best_idx] > gbest_fitness:
-            gbest_fitness = pbest_fitness[current_best_idx]
-            gbest_position = pbest_positions[current_best_idx].copy()
+            # --- Evaluasi ulang & update pbest/gbest (berlaku utk semua kasus)
+            fitness_values = evaluate_swarm(positions, fitness_matrix, n_jobs)
+            improved_mask = fitness_values > pbest_fitness
+            pbest_positions[improved_mask] = positions[improved_mask]
+            pbest_fitness[improved_mask] = fitness_values[improved_mask]
 
-        # --- Cek konvergensi
-        if (gbest_fitness - prev_best) < p["convergence_threshold"]:
-            no_improve_count += 1
-        else:
-            no_improve_count = 0
-        prev_best = gbest_fitness
+            current_best_idx = np.argmax(pbest_fitness)
+            if pbest_fitness[current_best_idx] > gbest_fitness:
+                gbest_fitness = pbest_fitness[current_best_idx]
+                gbest_position = pbest_positions[current_best_idx].copy()
 
-        switch_log.append({
-            "iteration": it,
-            "diversity": round(diversity, 4),
-            "diversity_state": classify_diversity(diversity),
-            "chosen_algorithm": algo,
-        })
-        convergence_log.append({
-            "iteration": it,
-            "diversity": round(diversity, 4),
-            "algorithm": algo,
-            "best_fitness": round(gbest_fitness, 4),
-            "avg_fitness": round(fitness_values.mean(), 4),
-        })
+            # --- Cek konvergensi
+            if (gbest_fitness - prev_best) < p["convergence_threshold"]:
+                no_improve_count += 1
+            else:
+                no_improve_count = 0
+            prev_best = gbest_fitness
 
-        if verbose and it % max(1, p["max_iterations"] // 10) == 0:
-            print(f"[HYBRID] Iter {it:4d} | Algo: {algo:3s} | "
-                  f"Diversity: {diversity:.3f} | Best: {gbest_fitness:.2f} | "
-                  f"Avg: {fitness_values.mean():.2f}")
+            switch_log.append({
+                "iteration": it,
+                "diversity": round(diversity, 4),
+                "diversity_state": classify_diversity(diversity),
+                "chosen_algorithm": algo,
+            })
+            convergence_log.append({
+                "iteration": it,
+                "diversity": round(diversity, 4),
+                "algorithm": algo,
+                "best_fitness": round(gbest_fitness, 4),
+                "avg_fitness": round(fitness_values.mean(), 4),
+            })
 
-        if no_improve_count >= p["convergence_patience"]:
-            if verbose:
-                print(f"\n[HYBRID] Konvergen pada iterasi {it} "
-                      f"(tidak ada perbaikan signifikan selama "
-                      f"{p['convergence_patience']} iterasi berturut-turut)")
-            break
+            if verbose and it % max(1, p["max_iterations"] // 20) == 0:
+                print(f"[HYBRID] Iter {it:4d} | Algo: {algo:3s} | "
+                      f"Diversity: {diversity:.3f} | Best: {gbest_fitness:.2f} | "
+                      f"Avg: {fitness_values.mean():.2f}")
+
+            it += 1
+
+            if no_improve_count >= p["convergence_patience"]:
+                converged = True
+                if verbose:
+                    print(f"\n[HYBRID] Konvergen pada iterasi {it} "
+                          f"(tidak ada perbaikan signifikan selama "
+                          f"{p['convergence_patience']} iterasi berturut-turut)")
+                break
 
     elapsed_time = time.perf_counter() - start_time
     best_solution = decode_position(gbest_position, n_jobs)
 
     if verbose:
         print(f"\n[HYBRID] Selesai dalam {elapsed_time:.2f} detik "
-              f"({it + 1} iterasi). Fitness terbaik: {gbest_fitness:.2f}")
+              f"({it} iterasi). Fitness terbaik: {gbest_fitness:.2f}")
 
     return best_solution, gbest_fitness, convergence_log, switch_log
 
@@ -359,7 +411,7 @@ def run_hybrid_optimization(
 if __name__ == "__main__":
     from src.Preprocessing import load_and_preprocess
     from src.GeneticAlgorithm import solution_to_dataframe
-    from src.AdaptiveSwitching import (summarize_switch_log)
+    from src.AdaptiveSwitching import summarize_switch_log
 
     df_grad, df_job = load_and_preprocess(
         grad_path="../data/graduates_dummy.csv",
