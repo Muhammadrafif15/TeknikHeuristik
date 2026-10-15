@@ -263,7 +263,7 @@ def run_pso(
 
 
 # ============================================================
-# MODE STANDALONE (opsional, untuk testing modul ini sendiri)
+# Testing
 # ============================================================
 if __name__ == "__main__":
     from src.Preprocessing import (load_and_preprocess)
